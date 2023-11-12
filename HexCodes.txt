@@ -1,0 +1,9 @@
+Royal Blue (#4169E1): Use royal blue as the primary color. It signifies trust, professionalism, and reliability. It also has a calming effect, which is suitable for a healthcare-related website.
+
+White (#FFFFFF): White represents cleanliness, purity, and simplicity. It's often used as a background color to enhance readability and create a sense of spaciousness.
+
+Green (#00AA13): Green is associated with health, wellness, and nature. It can be used as an accent color to convey a sense of freshness and vitality.
+
+Light Gray (#D3D3D3): Light gray can be used for borders, dividers, or secondary elements. It provides a subtle contrast and helps in maintaining a clean and organized layout.
+
+Red (#FF0000): Use red sparingly for important call-to-action buttons or alerts. Red can signify urgency and draw attention effectively.
