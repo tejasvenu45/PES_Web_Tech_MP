@@ -1,0 +1,29 @@
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .logo {
+    font-weight: bold;
+  }
+  
+  .brand {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .links {
+    display: flex;
+  }
+  
+  .link {
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  
