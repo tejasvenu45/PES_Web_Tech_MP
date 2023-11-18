@@ -6,7 +6,7 @@ import './PersonelHygiene.css';
 const ProductList = () => {
   const [products] = useState([
     { id: 1, name: 'Personel Hygiene', description: 'Browse Your Dialy essentials', imageUrl: 'https://5.imimg.com/data5/SELLER/Default/2023/8/335969518/FA/VQ/WT/133360592/dove-shampoo.jpeg' },
-    { id: 2, name: 'Dengue', description: 'Browse World Class mosquito replent', imageUrl: 'https://www.bigbasket.com/media/uploads/p/l/40181714_2-nippo-rechargeable-mini-mosquito-bat-lithium-ion.jpg?tr=w-1080,q=80' },
+    { id: 2, name: 'ysiusvhosu', description: 'Browse World Class mosquito replent', imageUrl: 'https://www.bigbasket.com/media/uploads/p/l/40181714_2-nippo-rechargeable-mini-mosquito-bat-lithium-ion.jpg?tr=w-1080,q=80' },
     { id: 3, name: 'Cosmetics', description: '', imageUrl: 'url3' },
     { id: 4, name: 'Product 4', description: 'Description 4', imageUrl: 'url4' },
     { id: 5, name: 'Product 5', description: 'Description 5', imageUrl: 'url5' },

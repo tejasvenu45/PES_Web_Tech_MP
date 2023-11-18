@@ -23,7 +23,7 @@ const ProductList = () => {
           <div className="product-info">
             <h3>{product.name}</h3>
             <p>{product.description}</p>
-            <button>Add to Cart</button>
+            <button >Add to Cart</button>
           </div>
         </div>
       ))}
