@@ -1,20 +1,28 @@
 /* Navbar.css */
 
 .navbar {
-    display: flex;
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    background-color:bisque ;
+    color:rgb(67, 12, 12);
+    display:flex;
+    align-items:center;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #320202;
-    color: white;
+
   }
-  
+  .logo-img {
+    width: 54px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-left: 12px;
+  }
   .logo {
-    font-weight: bold;
+    height: 10%;
   }
   
   .brand {
-    font-size: 1.5em;
+    font-size: 2.5rem;
     font-weight: bold;
   }
   
@@ -25,5 +33,11 @@
   .link {
     margin-left: 15px;
     cursor: pointer;
+    padding-right: 12px;
+    font-weight: bold;
+    font-size: large;
+  }
+  .link :hover{
+    color: blue;
   }
   

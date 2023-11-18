@@ -1,0 +1,40 @@
+.sidebar {
+    width: 200px;
+    background-color: #f0f0f0;
+    margin-top: 15px;
+    height:500px  ;
+    
+    position: fixed;
+   top: 1;
+     left: 1;
+    background-color: rgb(67, 12, 12); 
+    color:white;
+    
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul li a {
+    text-decoration: none;
+    color: #FFFF;
+    display: block;
+    padding: 10px;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: bisque;
+    color:rgb(67, 12, 12);
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  

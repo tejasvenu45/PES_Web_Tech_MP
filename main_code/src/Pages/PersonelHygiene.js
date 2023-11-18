@@ -1,7 +1,7 @@
 // ProductList.js
 
 import React, { useState } from 'react';
-import './product.css';
+import './PersonelHygiene.css';
 
 const ProductList = () => {
   const [products] = useState([
@@ -23,7 +23,7 @@ const ProductList = () => {
           <div className="product-info">
             <h3>{product.name}</h3>
             <p>{product.description}</p>
-            <button>Visit Me</button>
+            <button>Add To Cart</button>
           </div>
         </div>
       ))}

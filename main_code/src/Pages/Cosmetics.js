@@ -1,7 +1,7 @@
 // ProductList.js
 
 import React, { useState } from 'react';
-import './product.css';
+import './Cosmetics.css';
 
 const ProductList = () => {
   const [products] = useState([

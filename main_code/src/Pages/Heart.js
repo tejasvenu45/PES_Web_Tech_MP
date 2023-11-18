@@ -1,9 +1,9 @@
 // ProductList.js
 
 import React, { useState } from 'react';
-import './product.css';
+import './Heart.css';
 
-const ProductList = () => {
+const Heartmedicines = () => {
   const [products] = useState([
     { id: 1, name: 'Personel Hygiene', description: 'Browse Your Dialy essentials', imageUrl: 'https://5.imimg.com/data5/SELLER/Default/2023/8/335969518/FA/VQ/WT/133360592/dove-shampoo.jpeg' },
     { id: 2, name: 'Dengue', description: 'Browse World Class mosquito replent', imageUrl: 'https://www.bigbasket.com/media/uploads/p/l/40181714_2-nippo-rechargeable-mini-mosquito-bat-lithium-ion.jpg?tr=w-1080,q=80' },
@@ -23,7 +23,7 @@ const ProductList = () => {
           <div className="product-info">
             <h3>{product.name}</h3>
             <p>{product.description}</p>
-            <button>Visit Me</button>
+            <button>Add to Cart</button>
           </div>
         </div>
       ))}
@@ -31,4 +31,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default Heartmedicines;
