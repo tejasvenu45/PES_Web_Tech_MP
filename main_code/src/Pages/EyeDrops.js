@@ -3,13 +3,12 @@ import './PersonelHygiene.css';
 import { Link } from 'react-router-dom';
 const ProductList = () => {
   const [products] = useState([
-    { id: 1, name: 'ToothBrush', price: 5.99, imageUrl: 'https://images.ctfassets.net/6azfn76zuilv/2A7obk8RHEWYWTeD61tKpu/00b1193df2371e37d0fd26b30b6b6ffe/file.png?fm=webp&q=75' },
-    { id: 2, name: 'ToothPaste', price: 7.49, imageUrl: 'https://img.freepik.com/premium-vector/vector-isolated-object-illustration-oral-dental-care-toothbrush-toothpaste_311865-9441.jpg' },
-    { id: 3, name: 'Comb', price: 9.99, imageUrl: 'https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2F30610%2F30610.png%3Fversion%3D1594225801&w=1440&bc=%23f5f5f5&ib=%23f5f5f5&h=1440&q=30' },
-    { id: 4, name: 'Razor-Blade', price: 6.59, imageUrl: 'https://images.ctfassets.net/7tfi3razjgvb/5tdHBGoAwcQ364vJRHUWDO/35c13ac1c8f0ccb567bc613645b38c1c/sp_overview_402x.png' },
-    { id: 5, name: 'Shaving Cream', price: 8.29, imageUrl: 'https://m.media-amazon.com/images/I/71UgNqA9FEL.jpg' },
-    { id: 6, name: 'Trimmer', price: 4.99, imageUrl: 'https://www.morphyrichardsindia.com/medias/?context=bWFzdGVyfGltYWdlc3wzOTIyM3xpbWFnZS9qcGVnfGFHRTRMMmhpT1M4NE9UUXdPVEE0TlRjMk56azR8NmJhNGRmMDA5YmM4ZTk0NTYzOWRiN2VhYTVjZjE4ZDE1NDRmYzU4Y2I4YmU2NGJhNDk4MGE0NTFjZTZlYzgyMw' },
-
+    { id: 1, name: 'Similasan pink Eye Relief Eye Drops 0.33 oz', price: 5.99, imageUrl: 'https://cdn11.bigcommerce.com/s-ilgxsy4t82/images/stencil/960w/products/52784/107920/71GjFaBYsgL__87808.1659779756.jpg?c=1' },
+    { id: 2, name: 'Lubricant Eye Drop 15 Ml By Sunmark', price: 7.49, imageUrl: 'https://cdn11.bigcommerce.com/s-ilgxsy4t82/images/stencil/960w/products/236622/672107/115758_3f5e6108-3bae-43a2-bef6-5f71ab0a8ae0__33178.1689056907.jpg?c=1' },
+    { id: 3, name: 'Sunmark Eye Itch Relief Antihistamine Eye Drops 5 Oz By Sunmark', price: 9.99, imageUrl: 'https://cdn11.bigcommerce.com/s-ilgxsy4t82/images/stencil/960w/products/236616/672104/159169__25648.1689056905.jpg?c=1' },
+    { id: 4, name: 'REFRESH TEARS Lubricant Eye Drops 0.50 oz', price: 6.59, imageUrl: 'https://cdn11.bigcommerce.com/s-ilgxsy4t82/images/stencil/960w/products/34227/46453/077508__14333__35133.1657343224.jpg?c=1' },
+    { id: 5, name: 'OTC Polysporin Pink Eye Drops 15 ml', price: 8.29, imageUrl: 'https://cdn11.bigcommerce.com/s-ilgxsy4t82/images/stencil/960w/products/200715/472662/Polysporin_Pink_Eye_Drops_15ml__99184.1698922333.png?c=1' },
+    { id: 6, name: 'Trimmer', price: 4.99, imageUrl: 'https://cdn11.bigcommerce.com/s-ilgxsy4t82/images/stencil/960w/products/249470/696616/hylo-tears-2020__94434.1691048637.jpg?c=1'},
     // Existing products ...
   ]);
   const [cartItems, setCartItems] = useState([]);
@@ -27,6 +26,15 @@ const ProductList = () => {
     }
     setTotalPrice(totalPrice + product.price);
   };
+
+  const handlePayment = () => {
+    // Simulating payment received
+    alert('Payment received from Google Pay. Your order is being processed for delivery.');
+    // Reset cart and total price after payment
+    setCartItems([]);
+    setTotalPrice(0);
+  };
+
   return (
     <div>
       <div className="product-page">
@@ -44,7 +52,7 @@ const ProductList = () => {
 
         {/* Cart Section */}
         <div className="cart">
-          <h2>Cart</h2>
+          <h2 >Cart</h2>
           <div className="cart-items">
             {cartItems.map((item) => (
               <div key={item.id} className="cart-item">
@@ -54,9 +62,8 @@ const ProductList = () => {
           </div>
           <p>Total Price: ${totalPrice}</p>
           <div className="go-to-payment">
-            <Link to="/payment">
-              <button>Go to Payment</button>
-            </Link>
+            {/* Updated button with onClick handler */}
+            <button onClick={handlePayment}>Proceed to Payment</button>
           </div>
         </div>
       </div>

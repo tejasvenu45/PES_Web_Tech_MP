@@ -3,14 +3,12 @@ import './PersonelHygiene.css';
 import { Link } from 'react-router-dom';
 const ProductList = () => {
   const [products] = useState([
-    { id: 1, name: 'ToothBrush', price: 5.99, imageUrl: 'https://images.ctfassets.net/6azfn76zuilv/2A7obk8RHEWYWTeD61tKpu/00b1193df2371e37d0fd26b30b6b6ffe/file.png?fm=webp&q=75' },
-    { id: 2, name: 'ToothPaste', price: 7.49, imageUrl: 'https://img.freepik.com/premium-vector/vector-isolated-object-illustration-oral-dental-care-toothbrush-toothpaste_311865-9441.jpg' },
-    { id: 3, name: 'Comb', price: 9.99, imageUrl: 'https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2F30610%2F30610.png%3Fversion%3D1594225801&w=1440&bc=%23f5f5f5&ib=%23f5f5f5&h=1440&q=30' },
-    { id: 4, name: 'Razor-Blade', price: 6.59, imageUrl: 'https://images.ctfassets.net/7tfi3razjgvb/5tdHBGoAwcQ364vJRHUWDO/35c13ac1c8f0ccb567bc613645b38c1c/sp_overview_402x.png' },
-    { id: 5, name: 'Shaving Cream', price: 8.29, imageUrl: 'https://m.media-amazon.com/images/I/71UgNqA9FEL.jpg' },
-    { id: 6, name: 'Trimmer', price: 4.99, imageUrl: 'https://www.morphyrichardsindia.com/medias/?context=bWFzdGVyfGltYWdlc3wzOTIyM3xpbWFnZS9qcGVnfGFHRTRMMmhpT1M4NE9UUXdPVEE0TlRjMk56azR8NmJhNGRmMDA5YmM4ZTk0NTYzOWRiN2VhYTVjZjE4ZDE1NDRmYzU4Y2I4YmU2NGJhNDk4MGE0NTFjZTZlYzgyMw' },
-
-    // Existing products ...
+    { id: 1, name: 'Kapiva Dia Free Juice', price: 5.99, imageUrl: 'https://m.media-amazon.com/images/I/61dPNIQ1EnL._AC_UL480_FMwebp_QL65_.jpg' },
+    { id: 2, name: 'Aadved Ayush 82 | Control Diabetes and Blood Sugar Naturally', price: 7.49, imageUrl: 'https://m.media-amazon.com/images/I/81axPMUesHL._AC_UL480_FMwebp_QL65_.jpg' },
+    { id: 3, name: 'Krishnas Diabic Care Tablet - 80 Tab', price: 9.99, imageUrl: 'https://m.media-amazon.com/images/I/71ROGMI-KxL._AC_UL480_FMwebp_QL65_.jpg' },
+    { id: 4, name: 'GUDMAR 500 mg, Pack Of 60 Capsules For Regulation Of Blood Sugar', price: 6.59, imageUrl: 'https://m.media-amazon.com/images/I/71OMABKugoL._AC_UL480_FMwebp_QL65_.jpg' },
+    { id: 5, name: 'Himalaya Wellness Pure Herbs Meshashringi Metabolic Wellness - 60 Tablet', price: 8.29, imageUrl: 'https://m.media-amazon.com/images/I/61lRRkazp9L._AC_UL480_FMwebp_QL65_.jpg' },
+    { id: 6, name: 'Just Jaivik Organic Gymnema/Gymnema Sylvestre/Gurmar Tablets', price: 4.99, imageUrl: 'https://m.media-amazon.com/images/I/61vbmr73PxL._AC_UL480_FMwebp_QL65_.jpg' },
   ]);
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -27,6 +25,15 @@ const ProductList = () => {
     }
     setTotalPrice(totalPrice + product.price);
   };
+
+  const handlePayment = () => {
+    // Simulating payment received
+    alert('Payment received from Google Pay. Your order is being processed for delivery.');
+    // Reset cart and total price after payment
+    setCartItems([]);
+    setTotalPrice(0);
+  };
+
   return (
     <div>
       <div className="product-page">
@@ -44,7 +51,7 @@ const ProductList = () => {
 
         {/* Cart Section */}
         <div className="cart">
-          <h2>Cart</h2>
+          <h2 >Cart</h2>
           <div className="cart-items">
             {cartItems.map((item) => (
               <div key={item.id} className="cart-item">
@@ -54,9 +61,8 @@ const ProductList = () => {
           </div>
           <p>Total Price: ${totalPrice}</p>
           <div className="go-to-payment">
-            <Link to="/payment">
-              <button>Go to Payment</button>
-            </Link>
+            {/* Updated button with onClick handler */}
+            <button onClick={handlePayment}>Proceed to Payment</button>
           </div>
         </div>
       </div>

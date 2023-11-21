@@ -3,14 +3,12 @@ import './PersonelHygiene.css';
 import { Link } from 'react-router-dom';
 const ProductList = () => {
   const [products] = useState([
-    { id: 1, name: 'ToothBrush', price: 5.99, imageUrl: 'https://images.ctfassets.net/6azfn76zuilv/2A7obk8RHEWYWTeD61tKpu/00b1193df2371e37d0fd26b30b6b6ffe/file.png?fm=webp&q=75' },
-    { id: 2, name: 'ToothPaste', price: 7.49, imageUrl: 'https://img.freepik.com/premium-vector/vector-isolated-object-illustration-oral-dental-care-toothbrush-toothpaste_311865-9441.jpg' },
-    { id: 3, name: 'Comb', price: 9.99, imageUrl: 'https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2F30610%2F30610.png%3Fversion%3D1594225801&w=1440&bc=%23f5f5f5&ib=%23f5f5f5&h=1440&q=30' },
-    { id: 4, name: 'Razor-Blade', price: 6.59, imageUrl: 'https://images.ctfassets.net/7tfi3razjgvb/5tdHBGoAwcQ364vJRHUWDO/35c13ac1c8f0ccb567bc613645b38c1c/sp_overview_402x.png' },
-    { id: 5, name: 'Shaving Cream', price: 8.29, imageUrl: 'https://m.media-amazon.com/images/I/71UgNqA9FEL.jpg' },
-    { id: 6, name: 'Trimmer', price: 4.99, imageUrl: 'https://www.morphyrichardsindia.com/medias/?context=bWFzdGVyfGltYWdlc3wzOTIyM3xpbWFnZS9qcGVnfGFHRTRMMmhpT1M4NE9UUXdPVEE0TlRjMk56azR8NmJhNGRmMDA5YmM4ZTk0NTYzOWRiN2VhYTVjZjE4ZDE1NDRmYzU4Y2I4YmU2NGJhNDk4MGE0NTFjZTZlYzgyMw' },
-
-    // Existing products ...
+    { id: 1, name: 'Johnson Baby Powder', price: 5.99, imageUrl: 'https://s3.images-iherb.com/jnj/jnj03072/l/1.jpg' },
+    { id: 2, name: 'Johnson Baby Shampoo', price: 7.49, imageUrl: 'https://www.rationatmydoor.com/wp-content/uploads/2019/02/johnsons-babyshampoo.jpg' },
+    { id: 3, name: 'Pampers', price: 9.99, imageUrl: 'https://th.bing.com/th/id/OIP.UdCDtO47OOVbT3iJfXrJCwHaHa?rs=1&pid=ImgDetMain' },
+    { id: 4, name: 'Mamy Poko Pants', price: 6.59, imageUrl: 'https://n3.sdlcdn.com/imgs/e/t/r/Mamy-Poko-Pants-SDL709564447-1-c598a.jpg' },
+    { id: 5, name: 'Baby Milk Bottle', price: 8.29, imageUrl: 'https://cdn01.pharmeasy.in/dam/products_otc/J26433/liveasy-baby-care-feeding-bottle-1-1647333741.jpg?dim=700x0&dpr=1&q=100' },
+    { id: 6, name: 'Baby Soap', price: 4.99, imageUrl: 'https://cdn01.pharmeasy.in/dam/products_otc/M45205/johnsons-baby-soap-box-of-400-g-buy-3-get-1-free-1-1654256126.jpg?dim=700x0&dpr=1&q=100' },
   ]);
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
@@ -27,6 +25,15 @@ const ProductList = () => {
     }
     setTotalPrice(totalPrice + product.price);
   };
+
+  const handlePayment = () => {
+    // Simulating payment received
+    alert('Payment received from Google Pay. Your order is being processed for delivery.');
+    // Reset cart and total price after payment
+    setCartItems([]);
+    setTotalPrice(0);
+  };
+
   return (
     <div>
       <div className="product-page">
@@ -44,7 +51,7 @@ const ProductList = () => {
 
         {/* Cart Section */}
         <div className="cart">
-          <h2>Cart</h2>
+          <h2 >Cart</h2>
           <div className="cart-items">
             {cartItems.map((item) => (
               <div key={item.id} className="cart-item">
@@ -54,9 +61,8 @@ const ProductList = () => {
           </div>
           <p>Total Price: ${totalPrice}</p>
           <div className="go-to-payment">
-            <Link to="/payment">
-              <button>Go to Payment</button>
-            </Link>
+            {/* Updated button with onClick handler */}
+            <button onClick={handlePayment}>Proceed to Payment</button>
           </div>
         </div>
       </div>

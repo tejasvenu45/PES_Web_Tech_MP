@@ -1,0 +1,21 @@
+.About {
+    margin-top: 75px;
+      margin-left: 250px;
+      display: flex;
+      
+      flex-direction: column;
+      justify-content: center ;
+      
+      color:rgb(255, 255, 255);
+    }
+.About h1{
+  font-size:75px;
+  margin-left:500px;
+}
+.About p{
+
+  background-color: bisque;
+  color: rgb(87, 6, 6);
+  font-size: 30px;
+  font-weight: 900;
+}

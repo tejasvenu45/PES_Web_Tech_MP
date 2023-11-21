@@ -1,4 +1,0 @@
-rgb(221, 229, 221)//Background color
-header and footer colour #ffff
-badckground colour of the box white
-3px ridge black

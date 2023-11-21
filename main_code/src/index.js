@@ -13,6 +13,7 @@ import Heart from './Pages/Heart'
 import PersonelHygiene from './Pages/PersonelHygiene'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import Layout from './components/layout';
+import About from './About';
 const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<Layout />}>
@@ -24,6 +25,8 @@ const router = createBrowserRouter(
         <Route path='Diabetes' element={<Diabetes />} />
         <Route path='EyeDrops' element={<EyeDrops />} />
         <Route path='Heart' element={<Heart />} />
+        <Route path='About' element={<About />} />
+
         <Route path='PersonelHygiene' element={<PersonelHygiene />} />
       </Route>
     )
